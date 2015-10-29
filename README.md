@@ -1,7 +1,7 @@
 # Blog Django
-Install requirements in virtualenv:
+Install requirements for pip and bower:
 ```
-pip install -r requirements.txt
+pip install -r requirements.txt && python manage.py bower install
 ```
 Create database:
 ```

@@ -1,5 +1,6 @@
-from django.conf.urls import include, url
-from .views import ArticleListView
+from django.conf.urls import url
+from .views import ArticleListView, ArticleDetailView
 urlpatterns = [
-    url(r'^$', ArticleListView.as_view(), name='home'),
+    url(r'^$', ArticleListView.as_view(), name='article-list'),
+    url(r'^article/(?P<slug>[-\w]+)/$', ArticleDetailView.as_view(), name='article-detail'),
 ]

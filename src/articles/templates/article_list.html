@@ -1,10 +1,14 @@
 {% extends "base.html"%}
 
 {% block content %}
-<ul>
+<div class="ui text container">
     {% for article in articles %}
-        <li>{{article.title}}</li>
+    <div class="ui segment">
+        <a href="{% url 'article-detail' article.slug %}">
+            <div class="ui header">{{article.title}}</div>
+            <p>{{article.short_description}}</p>
+        </a>
+    </div>
     {% endfor %}
-</ul>
-
+</div>
 {% endblock %}
