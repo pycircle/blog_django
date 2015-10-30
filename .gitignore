@@ -50,9 +50,19 @@ coverage.xml
 
 # Django stuff:
 *.log
+migrations/
 
 # Sphinx documentation
 docs/_build/
 
 # PyBuilder
 target/
+
+# Databases
+*.squlite3
+
+# PyCharm
+.idea/
+
+# Bower
+components/
