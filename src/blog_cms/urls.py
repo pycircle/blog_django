@@ -22,6 +22,8 @@ urlpatterns = [
     url(r'^', include('articles.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
+
+# For development django search for static files in static_files folder (not need to collect static every time)
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

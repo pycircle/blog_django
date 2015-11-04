@@ -44,7 +44,7 @@ INSTALLED_APPS = (
 # Bower components definition
 
 BOWER_INSTALLED_APPS = (
-    'semantic#2.1.4',
+    'semantic#2.1.5',
     'jquery#2.1.4'
 )
 
@@ -113,9 +113,9 @@ USE_TZ = True
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-    "djangobower.finders.BowerFinder"
+    "djangobower.finders.BowerFinder" # Needed for django-bower
 )
-BOWER_COMPONENTS_ROOT = os.path.join(os.path.dirname(BASE_DIR), "components")
+BOWER_COMPONENTS_ROOT = os.path.join(os.path.dirname(BASE_DIR), "components") # Path of bower components
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, os.path.dirname(__file__), "static", "static_root")
 STATICFILES_DIRS = (
