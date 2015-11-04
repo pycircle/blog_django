@@ -4,10 +4,22 @@
 <div class="ui text container">
     {% for article in articles %}
     <div class="ui segment">
-        <a href="{% url 'article-detail' article.slug %}">
-            <div class="ui header">{{article.title}}</div>
-            <p>{{article.short_description}}</p>
+        <a href="{% url 'article-detail' article.slug %}">`
+            <h2 class="ui header">{{article.title}}</h2>
         </a>
+        <div class="ui grid">
+            <div class="two column row">
+                <div class="column">
+                    <h4 class="sub header">{{article.timestamp}}</h4>
+                </div>
+                <div class="column">
+                    <h4 class="sub header">Author: {{article.author}}</h4>
+                </div>
+            </div>
+            <a href="{% url 'article-detail' article.slug %}">
+                <p>{{article.short_description}}</p>
+            </a>
+        </div>
     </div>
     {% endfor %}
 </div>
