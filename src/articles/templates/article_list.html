@@ -3,6 +3,7 @@
 {% block content %}
 <div class="ui text container">
     {% for article in articles %}
+    {% if article.published %}
     <div class="ui segment">
         <a href="{% url 'article-detail' article.slug %}">`
             <h2 class="ui header">{{article.title}}</h2>
@@ -21,6 +22,7 @@
             </a>
         </div>
     </div>
+    {% endif %}
     {% endfor %}
 </div>
 {% endblock %}
