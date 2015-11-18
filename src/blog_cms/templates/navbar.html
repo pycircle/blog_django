@@ -1,17 +1,24 @@
-<div class="ui container">
-<div class="ui fixed inverted menu">
-  <a class="active item" href="{% url 'article-list' %}">
-    <div class="ui inverted header">
-        Blog
+<nav class="uk-navbar uk-margin-large-bottom">
+    <a class="uk-navbar-brand uk-hidden-small" href="{% url 'article-list' %}">Blog</a>
+    <ul class="uk-navbar-nav uk-hidden-small">
+        <li>
+            <a href="{% url 'article-list' %}">Strona główna</a>
+        </li>
+        <li>
+            <a href="#">O mnie</a>
+    </ul>
+    <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+    <div class="uk-navbar-brand uk-navbar-center uk-visible-small">Blog</div>
+</nav>
+
+<div id="offcanvas" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-navbar-nav uk-hidden-small">
+            <li>
+                <a href="{% url 'article-list' %}">Strona główna</a>
+            </li>
+            <li>
+                <a href="#">O mnie</a>
+        </ul>
     </div>
-  </a>
-  <div class="right menu">
-    <a class="ui item">
-      About me
-    </a>
-<a class="ui item">
-      Contact
-    </a>
-  </div>
-</div>
 </div>
