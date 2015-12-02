@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from django.utils.translation import ugettext_lazy as _
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -37,8 +38,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'djangobower',
     'disqus',
+    'djangobower',
+    'django_gravatar',
     'articles',
 )
 
@@ -51,6 +53,7 @@ BOWER_INSTALLED_APPS = (
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -96,6 +99,16 @@ DATABASES = {
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
+
+LANGUAGES = (
+    ('en', _('English')),
+    ('pl', _('Polish')),
+)
+
+LOCALE_PATHS = (
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), 'locale'),
+    os.path.join(BASE_DIR, 'articles', 'locale'),
+)
 
 LANGUAGE_CODE = 'en-us'
 
