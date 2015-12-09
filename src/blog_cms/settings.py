@@ -41,7 +41,7 @@ INSTALLED_APPS = (
     'disqus',
     'djangobower',
     'django_gravatar',
-    'articles',
+    'blog',
 )
 
 # Bower components definition
