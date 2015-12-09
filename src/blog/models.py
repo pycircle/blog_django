@@ -12,7 +12,7 @@ class Article(models.Model):
     title = models.CharField(max_length=255, null=False, blank=False, unique=True, verbose_name=_("title"))
     short_description = models.CharField(max_length=500, null=True, blank=True, verbose_name=_("short description"))
     description = models.TextField(null=True, blank=True, verbose_name=_("description"))
-    author = models.ForeignKey(AUTH_USER_MODEL, verbose_name=_("author"))
+    author = models.ForeignKey(AUTH_USER_MODEL, default='auth.User', verbose_name=_("author"))
     published = models.BooleanField(default=False, verbose_name=_("published"))
     slug = models.SlugField(unique=True, null=False, blank=True)
 
