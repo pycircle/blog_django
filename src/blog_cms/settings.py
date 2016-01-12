@@ -38,6 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.flatpages',
     'disqus',
     'djangobower',
     'django_gravatar',
@@ -142,3 +144,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, os.path.dirname(__file__), "static", "media"
 # Disqus settings
 DISQUS_API_KEY = 'FOOBARFOOBARFOOBARFOOBARFOOBARF'
 DISQUS_WEBSITE_SHORTNAME = 'foobar'
+
+# Flatpages settings
+SITE_ID = 1
