@@ -67,3 +67,7 @@ target/
 
 # Bower
 components/
+
+# Sublime
+*.sublime*
+
