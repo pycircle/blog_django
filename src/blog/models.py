@@ -16,7 +16,7 @@ class Article(models.Model):
     description = models.TextField(null=True, blank=True, verbose_name=_("description"))
     author = models.ForeignKey(AUTH_USER_MODEL, default='auth.User', verbose_name=_("author"))
     published = models.BooleanField(default=False, verbose_name=_("published"))
-    img = ThumbnailField(_('thumbnail'), upload_to='img/thumbnails', null=True, blank=True,
+    img = ThumbnailField(_('thumbnail'), upload_to='img/articles', null=True, blank=True,
         pil_save_options={
             'quality': 100,
         },
