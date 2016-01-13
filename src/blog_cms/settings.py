@@ -48,8 +48,8 @@ INSTALLED_APPS = (
 # Bower components definition
 
 BOWER_INSTALLED_APPS = (
-    'jquery#2.1.4',
-    'uikit#2.23.0'
+    'uikit#2.24.3',
+    'jquery#2.2.0',
 )
 
 MIDDLEWARE_CLASSES = (
