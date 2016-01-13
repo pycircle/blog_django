@@ -26,7 +26,7 @@ class Article(models.Model):
             'small': (300, 300, 'resize'),
             'tiny': (160, 120),
         })
-    slug = models.SlugField(unique=True, null=False, blank=False)
+    slug = models.SlugField(unique=True, null=False, blank=True)
 
     date_published = models.DateTimeField(null=True, blank=True, verbose_name=_("publication date"))
     updated = models.DateTimeField(auto_now_add=False, auto_now=True, verbose_name=_("updated"))
