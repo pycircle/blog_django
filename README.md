@@ -9,7 +9,7 @@ Simple example of blog created in django with bower integration. Semantic-UI use
 Install requirements for pip and bower:
 
 ```
-pip install -r requirements.txt && python manage.py bower install
+pip install -r requirements.txt && python src/manage.py bower install
 ```
 
 Compile translations from .po files:

@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'disqus',
     'djangobower',
     'django_gravatar',
+    'thumbnailfield',
     'blog',
 )
 
@@ -82,6 +83,16 @@ TEMPLATES = [
         },
     },
 ]
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.template.context_processors.debug",
+    "django.template.context_processors.i18n",
+    "django.template.context_processors.media",
+    "django.template.context_processors.static",
+    "django.template.context_processors.tz",
+    "django.contrib.messages.context_processors.messages"
+)
 
 WSGI_APPLICATION = 'blog_cms.wsgi.application'
 
@@ -131,7 +142,7 @@ STATICFILES_FINDERS = (
 )
 BOWER_COMPONENTS_ROOT = os.path.join(os.path.dirname(BASE_DIR), "components") # Path of bower components
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, os.path.dirname(__file__), "static", "static_root")
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_root")
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, os.path.dirname(__file__), "static", "static_files"),
 )
