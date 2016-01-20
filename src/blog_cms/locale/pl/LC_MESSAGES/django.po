@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-09 17:29+0000\n"
+"POT-Creation-Date: 2016-01-13 17:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,10 +19,10 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: blog_cms/settings.py:104
+#: blog_cms/settings.py:115
 msgid "English"
 msgstr "Angielski"
 
-#: blog_cms/settings.py:105
+#: blog_cms/settings.py:116
 msgid "Polish"
 msgstr "Polski"

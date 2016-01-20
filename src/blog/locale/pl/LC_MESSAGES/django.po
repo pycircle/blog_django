@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-09 17:29+0000\n"
+"POT-Creation-Date: 2016-01-13 17:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,55 +22,62 @@ msgstr ""
 msgid "Blog"
 msgstr "Blog"
 
-#: blog/models.py:12
+#: blog/models.py:13
 msgid "title"
 msgstr "tytuł"
 
-#: blog/models.py:13
+#: blog/models.py:14 blog/models.py:67
+msgid "category"
+msgstr "kategoria"
+
+#: blog/models.py:15
 msgid "short description"
 msgstr "krótki opis"
 
-#: blog/models.py:14
+#: blog/models.py:16 blog/models.py:54
 msgid "description"
 msgstr "opis"
 
-#: blog/models.py:15
+#: blog/models.py:17
 msgid "author"
 msgstr "autor"
 
-#: blog/models.py:16
+#: blog/models.py:18
 msgid "published"
 msgstr "opublikowano"
 
 #: blog/models.py:19
+msgid "thumbnail"
+msgstr "miniaturka"
+
+#: blog/models.py:31
+msgid "publication date"
+msgstr "data publikacji"
+
+#: blog/models.py:32
 msgid "updated"
 msgstr "zaktualizowano"
 
-#: blog/models.py:20
+#: blog/models.py:33
 msgid "created"
 msgstr "utworzono"
 
-#: blog/models.py:31
+#: blog/models.py:47
 msgid "article"
 msgstr "artykuł"
 
-#: blog/models.py:32
+#: blog/models.py:48
 msgid "articles"
 msgstr "artykuły"
 
-#: blog/models.py:36
+#: blog/models.py:52
 msgid "name"
 msgstr "nazwa"
 
-#: blog/models.py:37
+#: blog/models.py:53
 msgid "parent"
 msgstr "rodzic"
 
-#: blog/templates/article_detail.html:16
-#| msgid "author"
-msgid "Author"
-msgstr "autor"
-
-#: blog/templates/article_detail.html:16
-msgid "Posted in"
-msgstr "Opublikowano w"
+#: blog/models.py:68
+msgid "categories"
+msgstr "kategorie"

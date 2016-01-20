@@ -52,6 +52,7 @@ coverage.xml
 *.log
 migrations/
 static_root/
+media/*
 
 # Sphinx documentation
 docs/_build/

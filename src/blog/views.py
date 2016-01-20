@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import Article
+from .models import Article, Category
 
 
 class ArticleListView(ListView):
@@ -14,3 +14,7 @@ class ArticleDetailView(DetailView):
     model = Article
     template_name = "article_detail.html"
 
+class CategoryListView(ListView):
+    context_object_name = "category"
+    model = Category
+    template_name = "category_list.html"

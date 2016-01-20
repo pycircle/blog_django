@@ -10,13 +10,13 @@
     {% if article.published %}
         <article class="uk-article">
             <h1 class="uk-article-title">
-                <a href="{% url 'article-detail' article.slug %}">{{article.title}}</a>
+                <a href="{% url 'blog:article-detail' article.slug %}">{{article.title}}</a>
             </h1>
-            <p class="uk-article-meta">Autor: {{article.author|capfirst}} | {{article.created}} Posted in <a href="#">Blog</a></p>
+            <p class="uk-article-meta">Autor: {{article.author|capfirst}} | {{article.created}}{% if article.category %} {% trans "Posted in" %} <a href="{% url 'blog:category-list' article.category %}">{{article.category|capfirst}}</a>{% endif %}</p>
             <div class="uk-grid">
             <div class="uk-width-1-6">
                 <p>
-                    <a href="{% url 'article-detail' article.slug %}"><img width="300" height="300" src="{% get_media_prefix %}{{article.img.small}}"
+                    <a href="{% url 'blog:article-detail' article.slug %}"><img width="300" height="300" src="{% get_media_prefix %}{{article.img.small}}"
                                                                            alt="{{article.title}}"></a>
                 </p>
             </div>

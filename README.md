@@ -2,14 +2,20 @@
 
 ## Overview
 
-Simple example of blog created in django with bower integration. Semantic-UI used as frontent.
+Simple example of blog created in django with bower integration. UIkit used as frontent.
 
 ### Installation
+
+Go to src directory:
+
+```
+cd src
+```
 
 Install requirements for pip and bower:
 
 ```
-pip install -r requirements.txt && python src/manage.py bower install
+pip install -r requirements.txt && python manage.py bower install
 ```
 
 Compile translations from .po files:
