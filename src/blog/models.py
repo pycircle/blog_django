@@ -5,6 +5,7 @@ from unidecode import unidecode
 from django.utils.translation import ugettext_lazy as _
 from thumbnailfield.fields import ThumbnailField
 import datetime
+from django.contrib.auth.models import User
 
 AUTH_USER_MODEL = getattr(settings, 'AUTH_USER_MODEL', 'auth.User')
 
@@ -67,3 +68,6 @@ class Category(models.Model):
         verbose_name = _("category")
         verbose_name_plural = _("categories")
 
+class UserAbout(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    about = models.TextField()
